@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%  static 'css/second.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is for sorting the items</h1>
+
+    {% if access_items %}
+    <table border="5">
+        <thead>
+            <th>Item_name</th>
+            <th>Date&time</th>
+        </thead>
+    
+     {% for item in access_items %}
+     <tr>
+        <td>{{item.top_name}}</td>
+        <td>{{item.date1}}</td>
+     </tr>
+   
+     {% endfor %}
+    </table>
+     {% endif %}
+</body>
+</html>
